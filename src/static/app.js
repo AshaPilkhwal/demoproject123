@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const activities = await response.json();
 
       activitiesList.innerHTML = "";
-
       // Populate activities list with participants section
       Object.entries(activities).forEach(([name, details]) => {
         const spotsLeft = details.max_participants - details.participants.length;
